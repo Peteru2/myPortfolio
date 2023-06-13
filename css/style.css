@@ -9776,3 +9776,6 @@ textarea.form-control {
     padding: 12px;
   }
 }
+body{
+  overflow:hidden;
+}
