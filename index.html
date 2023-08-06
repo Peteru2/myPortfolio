@@ -396,6 +396,7 @@
     <section class="ftco-section ftco-hireme img mb-0" style="background-image: url(images/bg_1.jpg)">
     	<div class="overlay"></div>
 			<div class="container">
+					
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>I'm Available</span> for freelancing</h2>
@@ -493,7 +494,7 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+	
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -509,6 +510,67 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+	const myPost = [{
+		title: "the one and only",
+		Body: "This is a complete post",
+		id: 1
+	},
+	{title: "lets role", Body: "This is called roling", id: 2}]
+
+	getPost = ()=>{
+		setTimeout(() =>{
+			let myOut = ''
+			myPost.forEach((post) =>{
+			console.log(post.title)
+		})
+		}, 1000 )
+		
+	}
+
+	 function updatePost(post){
+		return new Promise((resolve, reject) =>{
+			setTimeout(() =>{
+			const error = true;
+			if(error){
+				resolve()
+			}
+			else{
+				reject("Error:Something went wrong")
+			}
+		}, 2000)
+		})
+		
+	 }
+// 	  updatePost({title: "jesus", Body: "The Son of God", id: 3}).then(getPost)
+// 	 const prom = fetch('https://jsonplaceholder.typicode.com/users')
+// .then(data =>data.json())	
+//   .catch(err => console.log(err))
+//  Promise.all([prom]).then((value) => {
+// 	console.log(value)
+//  })
+		// getPost();
+		// console.log("jesu ni oluwa")
+
+	// async function create() {
+	// 	await updatePost({title: "red", Body: "Thus is a red color", id: 5})
+
+	// 	getPost();
+	// }
+	// create();
+
+// Using await and async to fetch for users
+
+async function fetchUser() {
+	const User= await fetch('https://jsonplaceholder.typicode.com/users')
+	const res = await User.json()
+
+	console.log(res)
+	// getPost()
+} 
+
+fetchUser();
+</script>
     
   </body>
 </html>
