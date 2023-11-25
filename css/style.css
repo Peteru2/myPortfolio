@@ -8995,7 +8995,7 @@ border-radius: 12px;
 }
   .project.img-2 {
   height: 50vh !important; }
-    .img{
+    .img{ 
       outline: 10px solid rgba(0, 0, 0, 0);
       border-radius: 12px;
       margin: 0 auto;
@@ -9126,7 +9126,8 @@ textarea.form-control {
 
 .ftco-animate {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden; 
+}
 
 .bg-primary {
   background: #3e64ff !important; }
