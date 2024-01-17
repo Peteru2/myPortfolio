@@ -9767,7 +9767,7 @@ textarea.form-control {
 .about{
   font-family:Arial, Helvetica, sans-serif ; 
 }
-@media only screen  and (max-width: 480px){
+@media only screen  and (max-width: 410px){
   .spaced{
     margin-bottom: 10px;
   }
