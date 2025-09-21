@@ -382,17 +382,7 @@
     				</div>
   				</div>
 
-				  <div class="col-md-14">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/PassG.PNG);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a class="text-dark" href="#"><b>Password Generator</b></a></h3>
-							<button class="btn btn-danger spaced"><a href = "https://github.com/Peteru2/PassGEn"><b>View Code</b></a></button>
-							<button class="btn btn-danger spaced"><a href = "https://festive-bhaskara-d1c0bb.netlify.app/" target="_blank">Go To Site</a></button>
-	    					
-	    				</div>
-    				</div>
-  				</div>
+				  
 
     			<div class="col-md-14">
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Calc.PNG);">
@@ -599,65 +589,7 @@
   
   <script src="js/main.js"></script>
   <script>
-	const myPost = [{
-		title: "the one and only",
-		Body: "This is a complete post",
-		id: 1
-	},
-	{title: "lets role", Body: "This is called roling", id: 2}]
 
-	getPost = ()=>{
-		setTimeout(() =>{
-			let myOut = ''
-			myPost.forEach((post) =>{
-			console.log(post.title)
-		})
-		}, 1000 )
-		
-	}
-
-	 function updatePost(post){
-		return new Promise((resolve, reject) =>{
-			setTimeout(() =>{
-			const error = true;
-			if(error){
-				resolve()
-			}
-			else{
-				reject("Error:Something went wrong")
-			}
-		}, 2000)
-		})
-		
-	 }
-// 	  updatePost({title: "jesus", Body: "The Son of God", id: 3}).then(getPost)
-// 	 const prom = fetch('https://jsonplaceholder.typicode.com/users')
-// .then(data =>data.json())	
-//   .catch(err => console.log(err))
-//  Promise.all([prom]).then((value) => {
-// 	console.log(value)
-//  })
-		// getPost();
-		// console.log("jesu ni oluwa")
-
-	// async function create() {
-	// 	await updatePost({title: "red", Body: "Thus is a red color", id: 5})
-
-	// 	getPost();
-	// }
-	// create();
-
-// Using await and async to fetch for users
-
-async function fetchUser() {
-	const User= await fetch('https://jsonplaceholder.typicode.com/users')
-	const res = await User.json()
-
-	console.log(res)
-	// getPost()
-} 
-
-fetchUser();
 </script>
     
   </body>
