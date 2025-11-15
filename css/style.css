@@ -9538,7 +9538,13 @@ textarea.form-control {
   height: 3px;
 }
 
-
+ .navbar-brand:after {
+   
+    top: 50%;
+    left: -5.5px;
+    width: 32px;
+    height: 32px;
+    }
 
 
 
