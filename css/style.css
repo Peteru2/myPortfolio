@@ -9148,7 +9148,7 @@ h1, h2, h3, h4, h5,
       .project .text h3 a {
         color: #fff; }
     .project .text span {
-      color: rgba(255, 255, 255, 0.8);
+      /* color: rgba(255, 255, 255, 0.8); */
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 12px;
@@ -9156,8 +9156,11 @@ h1, h2, h3, h4, h5,
     @media (max-width: 767.98px) {
       .project .text {
         opacity: 1; }
-        .project .text span {
-          color: rgba(255, 255, 255, 0.8); } }
+        /* .project .text span {
+          color: rgba(255, 255, 255, 0.8); }
+          */ 
+          
+          } 
   .project:hover .overlay, .project:focus .overlay {
     opacity: .9; }
   .project:hover .text, .project:focus .text {
@@ -9898,4 +9901,142 @@ body{
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+/* Card */
+.project-card {
+  background: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.project-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.project-image {
+  width: 100%;
+   aspect-ratio: 16 / 7; /* less height */
+  max-height: 260px;  
+  /* background: #f3f4f6; */
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .project-image img {
+    object-fit: cover;
+  }
+}
+
+.project-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Content */
+.project-content {
+  padding: 24px 28px;
+}
+
+.project-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #722F37;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease;
+}
+
+.tech:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+/* Icon colors */
+.react { color: #61dafb; }
+.node { color: #3c873a; }
+.tailwind { color: #38bdf8; }
+.mongo { color: #4db33d; }
+
+/* Actions */
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Primary Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #722F37;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #000000;
+}
+
+/* Link */
+.btn-link {
+  font-size: 14px;
+  color: #4b5563;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-link:hover {
+  color: #111827;
 }
