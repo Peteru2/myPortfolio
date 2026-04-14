@@ -9933,17 +9933,25 @@ body{
   overflow: hidden;
 }
 
-.project-image img {
+.project-image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.5s ease;
+  height: 220px;
+  overflow: hidden;
+  background: #f3f4f6;
 }
 
 @media (min-width: 768px) {
-  .project-image img {
-    object-fit: cover;
+  .project-image {
+    height: 260px;
   }
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* IMPORTANT FIX */
+  object-position: center;
+  transition: transform 0.5s ease;
 }
 
 .project-image:hover img {
